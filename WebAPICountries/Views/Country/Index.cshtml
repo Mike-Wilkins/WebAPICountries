@@ -21,19 +21,15 @@
 
     <form asp-controller="Country" asp-action="GetFilter" method="get">
         <div class="input-group">
-            <select class="form-control" asp-for="Filter" asp-items=" new SelectList(ViewBag.FilterOptions)"></select>
-            <div class="input-group-append">
-                <button type="submit" class="btn btn-primary" style="margin-right: 30px">Filter</button>
-            </div>
+            <label class="control-label" style="margin-right:10px; margin-top:5px">Filter: </label>
+            <select class="form-control" asp-for="Filter" asp-items=" new SelectList(ViewBag.FilterOptions)" onchange="this.form.submit()" style="margin-right:30px"></select>
         </div>
     </form>
 
     <form asp-controller="Country" asp-action="GetListSize" method="get">
         <div class="input-group">
-            <select class="form-control" asp-for="ListSize" asp-items=" new SelectList(ViewBag.ListSize)"></select>
-            <div class="input-group-append">
-                <button type="submit" class="btn btn-primary">List</button>
-            </div>
+            <label class="control-label" style="margin-right:10px; margin-top:5px">List Size: </label>
+            <select class="form-control" asp-for="ListSize" asp-items=" new SelectList(ViewBag.ListSize)" onchange="this.form.submit()"></select>
         </div>
     </form>
 
